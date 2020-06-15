@@ -9,6 +9,7 @@ namespace simplecoreapp
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello World!");
             Console.WriteLine("Goodbye World!");
+            Console.WriteLine("Goodbye World!");
         }
     }
 }
