@@ -4,6 +4,7 @@ namespace simplecoreapp
 {
     class Program
     {
+        //Change 2
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
