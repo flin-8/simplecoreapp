@@ -11,5 +11,6 @@ namespace simplecoreapp
             Console.WriteLine("Goodbye World!");
             Console.WriteLine("Goodbye World!");
         }
+        //Adding random comments
     }
 }
