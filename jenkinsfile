@@ -4,7 +4,7 @@ pipeline {
    stages {
      stage ('Initialize') {
             steps {
-                sh 'printenv'
+                echo "Commit: ${ env.GIT_COMMIT }_ ${ GIT_COMMIT }, URL: ${ env.GIT_URL}"
             }
         }
         stage('build and publish') {
