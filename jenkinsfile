@@ -15,11 +15,11 @@ pipeline {
         }
         stage('pack') {
             steps {
-                octopusPack includePaths: './bin/Release/netcoreapp2.2/publish/', outputPath: '.', overwriteExisting: false, packageFormat: 'zip', packageId: 'simplecoreapp', packageVersion: '1.0.${BUILD_NUMBER}', sourcePath: '', toolId: 'octocli', verboseLogging: false
-                octopusPushPackage overwriteMode: 'FailIfExists', packagePaths: 'simplecoreapp.1.0.${BUILD_NUMBER}.zip', serverId: 'ben-test', spaceId: 'Spaces-1', toolId: 'octocli', verboseLogging: false
-                octopusPushBuildInformation commentParser: 'GitHub', overwriteMode: 'FailIfExists', packageId: 'simplecoreapp2', packageVersion: '4.0.${BUILD_NUMBER}', serverId: 'ben-test', spaceId: 'Spaces-1', toolId: 'octocli', verboseLogging: false
-                octopusCreateRelease cancelOnTimeout: false, channel: 'Default', defaultPackageVersion: '', deployThisRelease: false, deploymentTimeout: '', environment: 'test', jenkinsUrlLinkback: true, project: '1', releaseNotes: true, releaseNotesFile: '', releaseNotesSource: 'scm', releaseVersion: '1.0.${BUILD_NUMBER}', serverId: 'ben-test', spaceId: 'Spaces-1', tenant: '', tenantTag: '', toolId: 'octocli', verboseLogging: false, waitForDeployment: false
-                octopusDeployRelease cancelOnTimeout: false, deploymentTimeout: '00:01:00', environment: 'test', project: '1', releaseVersion: '1.0.${BUILD_NUMBER}', serverId: 'ben-test', spaceId: 'Spaces-1', tenant: '', tenantTag: '', toolId: 'octocli', variables: '', verboseLogging: false, waitForDeployment: true
+                octopusPack includePaths: './bin/Release/netcoreapp2.2/publish/', outputPath: '.', overwriteExisting: false, packageFormat: 'zip', packageId: 'simplecoreapp', packageVersion: '5.0.${BUILD_NUMBER}', sourcePath: '', toolId: 'octocli', verboseLogging: false
+                octopusPushPackage overwriteMode: 'FailIfExists', packagePaths: 'simplecoreapp.5.0.${BUILD_NUMBER}.zip', serverId: 'ben-test', spaceId: 'Spaces-1', toolId: 'octocli', verboseLogging: false
+                octopusPushBuildInformation commentParser: 'GitHub', overwriteMode: 'FailIfExists', packageId: 'simplecoreapp2', packageVersion: '5.0.${BUILD_NUMBER}', serverId: 'ben-test', spaceId: 'Spaces-1', toolId: 'octocli', verboseLogging: false
+                octopusCreateRelease cancelOnTimeout: false, channel: 'Default', defaultPackageVersion: '', deployThisRelease: false, deploymentTimeout: '', environment: 'test', jenkinsUrlLinkback: true, project: '1', releaseNotes: true, releaseNotesFile: '', releaseNotesSource: 'scm', releaseVersion: '5.0.${BUILD_NUMBER}', serverId: 'ben-test', spaceId: 'Spaces-1', tenant: '', tenantTag: '', toolId: 'octocli', verboseLogging: false, waitForDeployment: false
+                octopusDeployRelease cancelOnTimeout: false, deploymentTimeout: '00:01:00', environment: 'test', project: '1', releaseVersion: '5.0.${BUILD_NUMBER}', serverId: 'ben-test', spaceId: 'Spaces-1', tenant: '', tenantTag: '', toolId: 'octocli', variables: '', verboseLogging: false, waitForDeployment: true
             }
         }
    }
