@@ -2,6 +2,11 @@ pipeline {
    agent any
    
    stages {
+     stage ('Initialize') {
+            steps {
+                sh 'printenv'
+            }
+        }
         stage('build and publish') {
             steps {
                 sh(script: "dotnet publish -c Release", returnStdout: true)
