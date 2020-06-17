@@ -2,12 +2,6 @@ pipeline {
    agent any
    
    stages {
-//        stage('Checkout git repo') {
-//            steps {
-//                git branch: 'master', url:'https://github.com/flin-8/simplecoreapp'
-//               
-//            }
-//        }
         stage('build and publish') {
             steps {
                 sh(script: "dotnet publish -c Release", returnStdout: true)
